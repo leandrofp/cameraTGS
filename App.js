@@ -28,6 +28,8 @@ export default class App extends Component {
   render() {
     return (
       <QRCodeScanner
+        reactivate={true}
+        reactivateTimeout={7000} 
         onRead={this.onSuccess.bind(this)}
         topContent={
           <Text style={styles.centerText}>
@@ -47,8 +49,8 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   centerText: {
     flex: 1,
-    fontSize: 18,
-    padding: 32,
+    fontSize: 16,
+    padding: 20,
     color: '#777',
   },
   textBold: {
